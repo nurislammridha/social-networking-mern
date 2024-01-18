@@ -1,7 +1,7 @@
-const Message = require('../../Schema/Message')
+
 const Chat = require('../../Schema/Chat')
 const User = require('../../Schema/User')
-
+const Message = require('../../Schema/Message')
 const allMessage = async (req, res) => {
   try {
     const messages = await Message.find({ chat: req.params.chatId })
