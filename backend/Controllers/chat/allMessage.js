@@ -1,9 +1,9 @@
-const Message = require("../../Schema/Message");
+const Message = require('../../Schema/Message')
 const Chat = require('../../Schema/Chat')
 const User = require('../../Schema/User')
 
 const allMessage = async (req, res) => {
- try {
+  try {
     const messages = await Message.find({ chat: req.params.chatId })
       .populate("sender", "name image email")
       .populate("chat");
@@ -16,6 +16,6 @@ const allMessage = async (req, res) => {
 
 };
 
-module.exports = allMessage ;
+module.exports = allMessage;
 
 
